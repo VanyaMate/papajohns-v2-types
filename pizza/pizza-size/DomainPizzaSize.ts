@@ -19,8 +19,8 @@ export const DomainPizzaSize = object({
     additional: array(DomainPizzaAdditional),
 });
 
-export const DomainPizzaSizeCreateData = pick(DomainPizzaSize, [ 'size', 'multiplier', 'additional' ]);
-export const DomainPizzaSizeUpdateData = pick(partial(DomainPizzaSize), [ 'size', 'multiplier', 'additional' ]);
+export const DomainPizzaSizeCreateData = pick(DomainPizzaSize, [ 'size', 'multiplier' ]);
+export const DomainPizzaSizeUpdateData = pick(partial(DomainPizzaSize), [ 'size', 'multiplier' ]);
 
 export type _PizzaSize = Infer<typeof DomainPizzaSize>;
 export type _PizzaSizeCreateData = Infer<typeof DomainPizzaSizeCreateData>;
