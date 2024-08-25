@@ -1,20 +1,27 @@
 import {
-    _PizzaAdditional,
     DomainPizzaAdditional,
 } from '../pizza-additional/DomainPizzaAdditional';
-import { array, Describe, number, object, string } from 'superstruct';
+import {
+    array,
+    Infer,
+    number,
+    object,
+    partial,
+    pick,
+    string,
+} from 'superstruct';
 
 
-export type _PizzaSize = {
-    id: string,
-    size: number,
-    multiplier: number;
-    additional: _PizzaAdditional[];
-}
-
-export const DomainPizzaSize: Describe<_PizzaSize> = object({
+export const DomainPizzaSize = object({
     id        : string(),
-    size      : number(),
+    size      : string(),
     multiplier: number(),
     additional: array(DomainPizzaAdditional),
 });
+
+export const DomainPizzaSizeCreateData = pick(DomainPizzaSize, [ 'size', 'multiplier', 'additional' ]);
+export const DomainPizzaSizeUpdateData = pick(partial(DomainPizzaSize), [ 'size', 'multiplier', 'additional' ]);
+
+export type _PizzaSize = Infer<typeof DomainPizzaSize>;
+export type _PizzaSizeCreateData = Infer<typeof DomainPizzaSizeCreateData>;
+export type _PizzaSizeUpdateData = Infer<typeof DomainPizzaSizeUpdateData>;
