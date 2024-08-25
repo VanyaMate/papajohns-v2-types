@@ -1,28 +1,15 @@
-import { _FoodMark, DomainFoodMark } from '../food-mark/DomainFoodMark';
-import { _PizzaDough, DomainPizzaDough } from './pizza-dough/DomainPizzaDough';
+import { DomainFoodMark } from '../food-mark/DomainFoodMark';
+import { DomainPizzaDough } from './pizza-dough/DomainPizzaDough';
 import {
-    _PizzaAdditional,
     DomainPizzaAdditional,
 } from './pizza-additional/DomainPizzaAdditional';
 import {
-    _NutritionalValue, DomainNutritionalValue,
+    DomainNutritionalValue,
 } from '../food-nutritional-value/DomainNutritionalValue';
-import { array, Describe, number, object, string } from 'superstruct';
+import { array, Infer, number, object, string } from 'superstruct';
 
 
-export type _Pizza = {
-    id: string;
-    title: string;
-    description: string;
-    person: number;
-    mark: _FoodMark;
-    dough: _PizzaDough[];
-    additional: _PizzaAdditional[];
-    nutritionalValue: _NutritionalValue[];
-    price: number;
-}
-
-export const DomainPizza: Describe<_Pizza> = object({
+export const DomainPizza = object({
     id              : string(),
     title           : string(),
     description     : string(),
@@ -33,3 +20,5 @@ export const DomainPizza: Describe<_Pizza> = object({
     nutritionalValue: array(DomainNutritionalValue),
     price           : number(),
 });
+
+export type _Pizza = Infer<typeof DomainPizza>;

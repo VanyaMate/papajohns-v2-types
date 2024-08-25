@@ -16,7 +16,7 @@ export {
     DomainFoodMarkCreateData,
     DomainFoodMarkUpdateData,
 } from './food-mark/DomainFoodMark';
-export { DomainFoodType, _FoodType } from './food-type/DomainFoodType';
+export { DomainFoodCategory, _FoodType } from './food-category/DomainFoodCategory';
 export {
     DomainNutritionalValue, _NutritionalValue,
 } from './food-nutritional-value/DomainNutritionalValue';
