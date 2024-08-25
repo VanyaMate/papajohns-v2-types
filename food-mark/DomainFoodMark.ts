@@ -1,14 +1,15 @@
-import { Describe, object, string } from 'superstruct';
+import { Infer, object, partial, pick, string } from 'superstruct';
 
 
-export type _FoodMark = {
-    id: string;
-    text: string;
-    color: string;
-}
-
-export const DomainFoodMark: Describe<_FoodMark> = object({
+export const DomainFoodMark = object({
     id   : string(),
     text : string(),
     color: string(),
 });
+
+export const DomainFoodMarkCreateData = pick(DomainFoodMark, [ 'text', 'color' ]);
+export const DomainFoodMarkUpdateData = pick(partial(DomainFoodMark), [ 'text', 'color' ]);
+
+export type _FoodMark = Infer<typeof DomainFoodMark>;
+export type _FoodMarkCreateData = Infer<typeof DomainFoodMarkCreateData>;
+export type _FoodMarkUpdateData = Infer<typeof DomainFoodMarkUpdateData>;
