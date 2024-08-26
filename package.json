@@ -1,8 +1,12 @@
 {
     "name": "@vanyamate/papajohns-v2-types",
     "private": false,
-    "version": "0.0.11",
-    "main": "index.ts",
+    "version": "0.0.15",
+    "main": "./index.ts",
+    "type": "module",
+    "scripts": {
+        "build": "tsc --declaration --lib ES2020 --emitDeclarationOnly --outfile index.d.ts ./index.ts"
+    },
     "dependencies": {
         "superstruct": "^2.0.2"
     },
