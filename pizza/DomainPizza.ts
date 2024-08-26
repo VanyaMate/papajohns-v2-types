@@ -19,6 +19,7 @@ import {
 
 export const DomainPizza = object({
     id              : string(),
+    image           : string(),
     title           : string(),
     description     : string(),
     person          : number(),
