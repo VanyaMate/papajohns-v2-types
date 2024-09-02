@@ -1,14 +1,14 @@
 {
     "name": "@vanyamate/papajohns-v2-types",
     "private": false,
-    "version": "0.1.0",
+    "version": "0.2.0",
     "main": "./index.ts",
-    "type": "module",
+    "type": "commonjs",
     "scripts": {
-        "build": "tsc --declaration --lib ES2020 --emitDeclarationOnly --outfile index.d.ts ./index.ts"
+        "build": "tsc"
     },
     "dependencies": {
-        "superstruct": "^2.0.2"
+        "@vanyamate/types-kit": "^0.0.9"
     },
     "devDependencies": {
         "typescript": "^5.5.4"
