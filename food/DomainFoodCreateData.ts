@@ -6,23 +6,21 @@ import {
 } from '@vanyamate/types-kit';
 
 
-export type DomainFood = {
-    id: string;
+export type DomainFoodCreateData = {
     title: string;
     description: string;
 }
 
-export const isDomainFood: TypeGuard<DomainFood> = function (data): data is DomainFood {
+export const isDomainFoodCreateData: TypeGuard<DomainFoodCreateData> = function (data): data is DomainFoodCreateData {
     return !(
         !isObject(data) ||
-        !isString(data['id']) ||
         !isString(data['title']) ||
         !isString(data['description'])
     );
 };
 
-export const assertDomainFood: TypeAssert<DomainFood> = function (data, errorMessage) {
-    if (!isDomainFood(data)) {
+export const assertDomainFoodCreateData: TypeAssert<DomainFoodCreateData> = function (data, errorMessage) {
+    if (!isDomainFoodCreateData(data)) {
         throw errorMessage(data);
     }
 };

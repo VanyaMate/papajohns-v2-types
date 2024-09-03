@@ -6,25 +6,23 @@ import {
 } from '@vanyamate/types-kit';
 
 
-export type DomainFoodType = {
-    id: string;
+export type DomainFoodTypeCreateData = {
     title: string;
     image: string;
     price: string;
 }
 
-export const isDomainFoodType: TypeGuard<DomainFoodType> = function (data): data is DomainFoodType {
+export const isDomainFoodTypeCreateData: TypeGuard<DomainFoodTypeCreateData> = function (data): data is DomainFoodTypeCreateData {
     return !(
         !isObject(data) ||
-        !isString(data['id']) ||
         !isString(data['title']) ||
         !isString(data['image']) ||
         !isString(data['price'])
     );
 };
 
-export const assertDomainFoodType: TypeAssert<DomainFoodType> = function (data, errorMessage) {
-    if (!isDomainFoodType(data)) {
+export const assertDomainFoodTypeCreateData: TypeAssert<DomainFoodTypeCreateData> = function (data, errorMessage) {
+    if (!isDomainFoodTypeCreateData(data)) {
         throw errorMessage(data);
     }
 };
