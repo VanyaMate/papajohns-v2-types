@@ -1,21 +1,31 @@
-export * from './additional/DomainFoodAdditional';
-export * from './additional/DomainFoodAdditionalCreateData';
-export * from './additional/DomainFoodAdditionalUpdateData';
-export * from './category/DomainFoodCategory';
-export * from './category/DomainFoodCategoryCreateData';
-export * from './category/DomainFoodCategoryUpdateData';
-export * from './food/DomainFood';
-export * from './food/DomainFoodCreateData';
-export * from './food/DomainFoodUpdateData';
-export * from './mark/DomainFoodMark';
-export * from './mark/DomainFoodMarkCreateData';
-export * from './mark/DomainFoodMarkUpdateData';
-export * from './nutritional/DomainFoodNutritional';
-export * from './nutritional/DomainFoodNutritionalCreateData';
-export * from './nutritional/DomainFoodNutritionalUpdateData';
-export * from './size/DomainFoodSize';
-export * from './size/DomainFoodSizeCreateData';
-export * from './size/DomainFoodSizeUpdateData';
-export * from './type/DomainFoodType';
-export * from './type/DomainFoodTypeCreateData';
-export * from './type/DomainFoodTypeUpdateData';
+export * from './entities/food/DomainFood';
+export * from './entities/food/DomainFoodCreateData';
+export * from './entities/food/DomainFoodUpdateData';
+//
+export * from './entities/food-additional/DomainFoodAdditional';
+export * from './entities/food-additional/DomainFoodAdditionalCreateData';
+export * from './entities/food-additional/DomainFoodAdditionalUpdateData';
+//
+export * from './entities/food-base/DomainFoodBase';
+export * from './entities/food-base/DomainFoodBaseCreateData';
+export * from './entities/food-base/DomainFoodBaseUpdateData';
+//
+export * from './entities/food-category/DomainFoodCategory';
+export * from './entities/food-category/DomainFoodCategoryCreateData';
+export * from './entities/food-category/DomainFoodCategoryUpdateData';
+//
+export * from './entities/food-mark/DomainFoodMark';
+export * from './entities/food-mark/DomainFoodMarkCreateData';
+export * from './entities/food-mark/DomainFoodMarkUpdateData';
+//
+export * from './entities/food-ingredient/DomainFoodIngredient';
+export * from './entities/food-ingredient/DomainFoodIngredientCreateData';
+export * from './entities/food-ingredient/DomainFoodIngredientUpdateData';
+//
+export * from './entities/food-mark/DomainFoodMark';
+export * from './entities/food-mark/DomainFoodMarkCreateData';
+export * from './entities/food-mark/DomainFoodMarkUpdateData';
+//
+export * from './entities/food-size/DomainFoodSize';
+export * from './entities/food-size/DomainFoodSizeCreateData';
+export * from './entities/food-size/DomainFoodSizeUpdateData';
