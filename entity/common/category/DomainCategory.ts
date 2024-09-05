@@ -6,14 +6,14 @@ import {
 } from '@vanyamate/types-kit';
 
 
-export enum DomainFoodCategoryType {
+export enum DomainCategoryType {
     PIZZA  = 'pizza',
     COFFEE = 'coffee'
 }
 
 export type DomainCategory = {
     id: string;
-    type: DomainFoodCategoryType;
+    type: DomainCategoryType;
     image: string;
 }
 

@@ -1,11 +1,11 @@
 import { TypeGuard, TypeAssert } from '@vanyamate/types-kit';
-export declare enum DomainFoodCategoryType {
+export declare enum DomainCategoryType {
     PIZZA = "pizza",
     COFFEE = "coffee"
 }
 export type DomainCategory = {
     id: string;
-    type: DomainFoodCategoryType;
+    type: DomainCategoryType;
     image: string;
 };
 export declare const isDomainCategory: TypeGuard<DomainCategory>;

@@ -4,14 +4,14 @@ import {
     isObject,
     isString, isNumber, isArray,
 } from '@vanyamate/types-kit';
-import { DomainFoodCategoryType } from '../../common/category/DomainCategory';
+import { DomainCategoryType } from '../../common/category/DomainCategory';
 
 
 export type DomainFoodBaseCreateData = {
     title: string;
     image: string;
     price: number;
-    categoryType: Array<DomainFoodCategoryType>;
+    categoryType: Array<DomainCategoryType>;
 }
 
 export const isDomainFoodBaseCreateData: TypeGuard<DomainFoodBaseCreateData> = function (data): data is DomainFoodBaseCreateData {

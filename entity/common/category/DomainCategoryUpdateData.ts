@@ -4,11 +4,11 @@ import {
     isObject,
     isString, isOptional,
 } from '@vanyamate/types-kit';
-import { DomainFoodCategoryType } from './DomainCategory';
+import { DomainCategoryType } from './DomainCategory';
 
 
 export type DomainCategoryUpdateData = {
-    type?: DomainFoodCategoryType;
+    type?: DomainCategoryType;
     image?: string;
 }
 

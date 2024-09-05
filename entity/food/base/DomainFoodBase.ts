@@ -4,7 +4,7 @@ import {
     isObject,
     isString, isArray, isNumber,
 } from '@vanyamate/types-kit';
-import { DomainFoodCategoryType } from '../../common/category/DomainCategory';
+import { DomainCategoryType } from '../../common/category/DomainCategory';
 
 
 export type DomainFoodBase = {

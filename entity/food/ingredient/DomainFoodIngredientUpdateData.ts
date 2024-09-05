@@ -5,7 +5,7 @@ import {
     isString, isOptional, isNumber, isArray,
 } from '@vanyamate/types-kit';
 import { DomainFoodIngredientPostfix } from './DomainFoodIngredient';
-import { DomainFoodCategoryType } from '../../common/category/DomainCategory';
+import { DomainCategoryType } from '../../common/category/DomainCategory';
 
 
 export type DomainFoodIngredientUpdateData = {
@@ -14,7 +14,7 @@ export type DomainFoodIngredientUpdateData = {
     price?: number;
     amount?: number;
     postfix?: DomainFoodIngredientPostfix;
-    categoryType?: Array<DomainFoodCategoryType>;
+    categoryType?: Array<DomainCategoryType>;
 }
 
 export const isDomainFoodIngredientUpdateData: TypeGuard<DomainFoodIngredientUpdateData> = function (data): data is DomainFoodIngredientUpdateData {

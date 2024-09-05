@@ -1,7 +1,7 @@
 import { TypeGuard, TypeAssert } from '@vanyamate/types-kit';
-import { DomainFoodCategoryType } from './DomainCategory';
+import { DomainCategoryType } from './DomainCategory';
 export type DomainCategoryCreateData = {
-    type: DomainFoodCategoryType;
+    type: DomainCategoryType;
     image: string;
 };
 export declare const isDomainCategoryCreateData: TypeGuard<DomainCategoryCreateData>;

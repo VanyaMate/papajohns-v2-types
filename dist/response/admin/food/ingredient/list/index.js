@@ -1,1 +1,1 @@
-export * from './DomainAdminResponseFoodIgredients';
+export * from './DomainAdminResponseFoodIngredients';

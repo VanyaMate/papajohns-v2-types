@@ -1,9 +1,9 @@
 import { isObject, isString, } from '@vanyamate/types-kit';
-export var DomainFoodCategoryType;
-(function (DomainFoodCategoryType) {
-    DomainFoodCategoryType["PIZZA"] = "pizza";
-    DomainFoodCategoryType["COFFEE"] = "coffee";
-})(DomainFoodCategoryType || (DomainFoodCategoryType = {}));
+export var DomainCategoryType;
+(function (DomainCategoryType) {
+    DomainCategoryType["PIZZA"] = "pizza";
+    DomainCategoryType["COFFEE"] = "coffee";
+})(DomainCategoryType || (DomainCategoryType = {}));
 export const isDomainCategory = function (data) {
     return !(!isObject(data) ||
         !isString(data['id']) ||
