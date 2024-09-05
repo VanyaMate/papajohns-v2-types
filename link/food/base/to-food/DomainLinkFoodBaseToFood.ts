@@ -7,15 +7,13 @@ import {
 
 
 export type DomainLinkFoodBaseToFood = {
-    baseId: string;
-    foodId: string;
+    image: string
 }
 
 export const isDomainLinkFoodBaseToFood: TypeGuard<DomainLinkFoodBaseToFood> = function (data): data is DomainLinkFoodBaseToFood {
     return !(
         !isObject(data) ||
-        !isString(data['baseId']) ||
-        !isString(data['foodId'])
+        !isString(data['image'])
     );
 };
 
