@@ -1,10 +1,15 @@
-import { isArray, } from '@vanyamate/types-kit';
-import { isDomainCompositeCountFoodIngredient, } from '../../../../../composite';
-export const isDomainAdminResponseFoodIngredients = function (data) {
-    return isArray(data, isDomainCompositeCountFoodIngredient);
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.assertDomainAdminResponseFoodIngredients = exports.isDomainAdminResponseFoodIngredients = void 0;
+const types_kit_1 = require("@vanyamate/types-kit");
+const composite_1 = require("../../../../../composite");
+const isDomainAdminResponseFoodIngredients = function (data) {
+    return (0, types_kit_1.isArray)(data, composite_1.isDomainCompositeCountFoodIngredient);
 };
-export const assertDomainAdminResponseFoodIngredients = function (data, errorMessage) {
-    if (!isDomainAdminResponseFoodIngredients(data)) {
+exports.isDomainAdminResponseFoodIngredients = isDomainAdminResponseFoodIngredients;
+const assertDomainAdminResponseFoodIngredients = function (data, errorMessage) {
+    if (!(0, exports.isDomainAdminResponseFoodIngredients)(data)) {
         throw errorMessage(data);
     }
 };
+exports.assertDomainAdminResponseFoodIngredients = assertDomainAdminResponseFoodIngredients;

@@ -1,11 +1,16 @@
-import { isObject, isString, isOptional, } from '@vanyamate/types-kit';
-export const isDomainCategoryUpdateData = function (data) {
-    return !(!isObject(data) ||
-        !isOptional(data['type'], isString) ||
-        !isOptional(data['image'], isString));
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.assertDomainCategoryUpdateData = exports.isDomainCategoryUpdateData = void 0;
+const types_kit_1 = require("@vanyamate/types-kit");
+const isDomainCategoryUpdateData = function (data) {
+    return !(!(0, types_kit_1.isObject)(data) ||
+        !(0, types_kit_1.isOptional)(data['type'], types_kit_1.isString) ||
+        !(0, types_kit_1.isOptional)(data['image'], types_kit_1.isString));
 };
-export const assertDomainCategoryUpdateData = function (data, errorMessage) {
-    if (!isDomainCategoryUpdateData(data)) {
+exports.isDomainCategoryUpdateData = isDomainCategoryUpdateData;
+const assertDomainCategoryUpdateData = function (data, errorMessage) {
+    if (!(0, exports.isDomainCategoryUpdateData)(data)) {
         throw errorMessage(data);
     }
 };
+exports.assertDomainCategoryUpdateData = assertDomainCategoryUpdateData;

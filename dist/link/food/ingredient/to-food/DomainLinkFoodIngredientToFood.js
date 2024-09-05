@@ -1,10 +1,15 @@
-import { isObject, isString, } from '@vanyamate/types-kit';
-export const isDomainLinkFoodIngredientToFood = function (data) {
-    return !(!isObject(data) ||
-        !isString(data['field']));
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.assertDomainLinkFoodIngredientToFood = exports.isDomainLinkFoodIngredientToFood = void 0;
+const types_kit_1 = require("@vanyamate/types-kit");
+const isDomainLinkFoodIngredientToFood = function (data) {
+    return !(!(0, types_kit_1.isObject)(data) ||
+        !(0, types_kit_1.isString)(data['field']));
 };
-export const assertDomainLinkFoodIngredientToFood = function (data, errorMessage) {
-    if (!isDomainLinkFoodIngredientToFood(data)) {
+exports.isDomainLinkFoodIngredientToFood = isDomainLinkFoodIngredientToFood;
+const assertDomainLinkFoodIngredientToFood = function (data, errorMessage) {
+    if (!(0, exports.isDomainLinkFoodIngredientToFood)(data)) {
         throw errorMessage(data);
     }
 };
+exports.assertDomainLinkFoodIngredientToFood = assertDomainLinkFoodIngredientToFood;

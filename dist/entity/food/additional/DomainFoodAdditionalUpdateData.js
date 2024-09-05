@@ -1,13 +1,18 @@
-import { isObject, isString, isOptional, } from '@vanyamate/types-kit';
-export const isDomainFoodAdditionalUpdateData = function (data) {
-    return !(!isObject(data) ||
-        !isOptional(data['title'], isString) ||
-        !isOptional(data['image'], isString) ||
-        !isOptional(data['categoryType'], isString) ||
-        !isOptional(data['price'], isString));
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.assertDomainFoodAdditionalUpdateData = exports.isDomainFoodAdditionalUpdateData = void 0;
+const types_kit_1 = require("@vanyamate/types-kit");
+const isDomainFoodAdditionalUpdateData = function (data) {
+    return !(!(0, types_kit_1.isObject)(data) ||
+        !(0, types_kit_1.isOptional)(data['title'], types_kit_1.isString) ||
+        !(0, types_kit_1.isOptional)(data['image'], types_kit_1.isString) ||
+        !(0, types_kit_1.isOptional)(data['categoryType'], types_kit_1.isString) ||
+        !(0, types_kit_1.isOptional)(data['price'], types_kit_1.isString));
 };
-export const assertDomainFoodAdditionalUpdateData = function (data, errorMessage) {
-    if (!isDomainFoodAdditionalUpdateData(data)) {
+exports.isDomainFoodAdditionalUpdateData = isDomainFoodAdditionalUpdateData;
+const assertDomainFoodAdditionalUpdateData = function (data, errorMessage) {
+    if (!(0, exports.isDomainFoodAdditionalUpdateData)(data)) {
         throw errorMessage(data);
     }
 };
+exports.assertDomainFoodAdditionalUpdateData = assertDomainFoodAdditionalUpdateData;

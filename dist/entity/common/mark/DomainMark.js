@@ -1,12 +1,17 @@
-import { isObject, isString, } from '@vanyamate/types-kit';
-export const isDomainMark = function (data) {
-    return !(!isObject(data) ||
-        !isString(data['id']) ||
-        !isString(data['title']) ||
-        !isString(data['color']));
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.assertDomainMark = exports.isDomainMark = void 0;
+const types_kit_1 = require("@vanyamate/types-kit");
+const isDomainMark = function (data) {
+    return !(!(0, types_kit_1.isObject)(data) ||
+        !(0, types_kit_1.isString)(data['id']) ||
+        !(0, types_kit_1.isString)(data['title']) ||
+        !(0, types_kit_1.isString)(data['color']));
 };
-export const assertDomainMark = function (data, errorMessage) {
-    if (!isDomainMark(data)) {
+exports.isDomainMark = isDomainMark;
+const assertDomainMark = function (data, errorMessage) {
+    if (!(0, exports.isDomainMark)(data)) {
         throw errorMessage(data);
     }
 };
+exports.assertDomainMark = assertDomainMark;

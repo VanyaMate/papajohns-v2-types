@@ -1,13 +1,18 @@
-import { isNumber, } from '@vanyamate/types-kit';
-import { isDomainFoodSize, } from '../../../entity';
-export const isDomainCompositeCountFoodSize = function (data) {
-    return !(!isDomainFoodSize(data) ||
-        !isNumber(data['bases']) ||
-        !isNumber(data['additionals']) ||
-        !isNumber(data['categories']));
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.assertDomainCompositeCountFoodSize = exports.isDomainCompositeCountFoodSize = void 0;
+const types_kit_1 = require("@vanyamate/types-kit");
+const entity_1 = require("../../../entity");
+const isDomainCompositeCountFoodSize = function (data) {
+    return !(!(0, entity_1.isDomainFoodSize)(data) ||
+        !(0, types_kit_1.isNumber)(data['bases']) ||
+        !(0, types_kit_1.isNumber)(data['additionals']) ||
+        !(0, types_kit_1.isNumber)(data['categories']));
 };
-export const assertDomainCompositeCountFoodSize = function (data, errorMessage) {
-    if (!isDomainCompositeCountFoodSize(data)) {
+exports.isDomainCompositeCountFoodSize = isDomainCompositeCountFoodSize;
+const assertDomainCompositeCountFoodSize = function (data, errorMessage) {
+    if (!(0, exports.isDomainCompositeCountFoodSize)(data)) {
         throw errorMessage(data);
     }
 };
+exports.assertDomainCompositeCountFoodSize = assertDomainCompositeCountFoodSize;

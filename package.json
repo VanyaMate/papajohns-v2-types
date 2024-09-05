@@ -1,7 +1,7 @@
 {
     "name": "@vanyamate/papajohns-v2-types",
     "private": false,
-    "version": "0.3.3",
+    "version": "0.3.9",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "type": "commonjs",
@@ -9,7 +9,7 @@
         "build": "tsc"
     },
     "dependencies": {
-        "@vanyamate/types-kit": "^0.0.10"
+        "@vanyamate/types-kit": "^0.0.13"
     },
     "devDependencies": {
         "typescript": "^5.5.4"
